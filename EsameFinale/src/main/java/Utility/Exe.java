@@ -12,9 +12,9 @@ public class Exe {
 		a.setNome("Annalisa");
 		a.setCognome("Balena");
 		
-		System.out.println(exe.selectCompagnoById(a.getMatricola()).toString());		
-		exe.updateCompagno(a);
-		System.out.println(exe.selectCompagni().toString());
+		System.out.println(exe.selectCompagnoById(a.getMatricola()).getMatricola());		
+		//exe.updateCompagno(a);
+		System.out.println(exe.selectCompagni());
 	}
 
 }

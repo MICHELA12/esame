@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,10 +83,10 @@ public class CompagniManager {
 	public List<Compagni> selectCompagni(){
 		String sql = "SELECT * FROM compagni";
 		List<Compagni> compagni = new ArrayList<Compagni>();
-		PreparedStatement statement;
+		Statement statement;
 		try {
-			statement = connection.prepareStatement(sql);
-			ResultSet rs = statement.executeQuery();
+			statement = connection.createStatement();
+			ResultSet rs = statement.executeQuery(sql);
 			while(rs.next()) {
 				Compagni compagno = new Compagni();
 				compagno.setMatricola(rs.getString("matricola"));
