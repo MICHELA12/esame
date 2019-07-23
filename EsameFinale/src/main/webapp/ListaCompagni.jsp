@@ -20,7 +20,7 @@
 		</thead>
 
 		<tbody>
-			<c:forEach items="${c}" var="${elencoCompagni}">
+			<c:forEach var="c" items="${elencoCompagni}">
 				<tr data-id="${c.matricola}">
 					<td>${c.matricola}</td>
 					<td>${c.nome}</td>
